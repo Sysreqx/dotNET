@@ -1,0 +1,242 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    public enum GenderTypes
+    {
+        Male = 1,
+        Female = 0,
+        Kasiar = 2
+    }
+    class Program
+    {
+
+        static Tuple<double, double, double, double> MinAvrMaxMostOcc(params double [] array)
+        {
+            return new Tuple<double, double, double, double>(1, 2, 3, 4);
+
+        }
+        // Expression Bodied Members
+        static int Add2(int x, int y) => x + y;
+        static int FibSeq(int n) =>
+            (n == 0) ? 0 : 
+            (n == 1 ? 1 : 
+            (FibSeq(n-1) + FibSeq(n-2)));
+
+        // Optinal Parameters
+        static int Add(int x = 10, int y = 20)
+        {
+            return x + y;
+        }
+
+        static double Add(double x = 10, double y = 20)
+        {
+            return x + y;
+        }
+
+
+        static string AllUpperChars(string input)
+        {
+            List<char> upperChars = new List<char>();
+            foreach (char item in input)
+            {
+                if (char.IsUpper(item))
+                {
+                    upperChars.Add(item);
+                }
+            }
+            return new string(upperChars.ToArray());
+        }
+
+        static double AverageValue(int x, params double[] grades)
+        {
+            double totalGradeSum = 0D;
+            foreach (var item in grades)
+            {
+                totalGradeSum += item;
+            }
+            return totalGradeSum / grades.Length;
+        }
+
+        static double CalculateDiscountedPriceInShopGolubayaLaguna(double basePrice, GenderTypes type)
+        {
+            switch (type)
+            {
+                case GenderTypes.Male:
+                case GenderTypes.Female:
+                    return basePrice * 0.90;
+                case GenderTypes.Kasiar:
+                    return basePrice * 0.01;
+                default:
+                    return basePrice;
+            }
+        }
+        static TimeSpan TotalPeriodElapsed(DateTime[] startDateTime, DateTime[] finishDateTime)
+        {           
+            if (startDateTime.Length != finishDateTime.Length)
+            {
+                throw new Exception();
+            }
+
+            TimeSpan [] elapsedRecords = new TimeSpan[startDateTime.Length];
+
+            for (int i = 0; i < startDateTime.Length; i++)
+            {
+                elapsedRecords[i] = finishDateTime[i] - startDateTime[i];
+            }
+
+            int totalMinutes = 0;
+            foreach (var item in elapsedRecords)
+            {
+                totalMinutes += Convert.ToInt32(item.TotalMinutes);
+            }
+
+            totalMinutes = totalMinutes / elapsedRecords.Length;
+
+            return new TimeSpan(0, totalMinutes, 0);
+        }
+        static void Main(string[] args)
+        {
+            //double [] values = new double[] { 1.0, 2.0, 3.3 };
+
+            //double result = AverageValue(values);
+            //Console.WriteLine(result);
+
+            //DateTime[] startRecords = new DateTime[] { new DateTime(2018, 6, 25, 12, 30, 00), new DateTime(2018, 6, 26, 13, 45, 00) };
+            //DateTime[] finishRecords = new DateTime[] { new DateTime(2018, 6, 25, 13, 30, 00), new DateTime(2018, 6, 26, 14, 20, 00) };
+
+            //TimeSpan result = TotalPeriodElapsed(startRecords, finishRecords);
+            //Console.WriteLine(result.TotalMinutes);
+            // Verbatim string
+            //string instuctionOne = $@"When you use \n then you are {DateTime.Today.DayOfWeek}";
+            //Console.WriteLine(instuctionOne);
+
+            //string outputData = @"Hello \n my friend \t do you know me?";
+            //string pathToFile = @"D:\\anime\\bokunopiko";
+
+            //Console.WriteLine(pathToFile);
+            //Console.WriteLine(outputData);
+
+            //int size = 10;
+            //int[] array = new int[5];
+            //int[] secondArray = new int[size + 2];
+            //int[] thirdArray = new int[] { 1, 2, 3, 4, 6 };
+            //var wtfArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            //string[] strArray = new string[] { "A", "BC", "DEF" };
+
+            //Console.WriteLine(thirdArray.Average());
+
+            //Random rand = new Random();
+            //int[,] matrix = new int[4, 5];
+            //for (int i = 0; i < matrix.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < matrix.GetLength(1); j++)
+            //    {
+            //        matrix[i, j] = rand.Next(0, 10);
+            //        Console.Write(matrix[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //int sizeIncrementer = 1;
+            //int[][] juggedMatrix = new int[5][];
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    juggedMatrix[i] = new int[sizeIncrementer];
+
+            //    for(int j = 0; j < sizeIncrementer; j++)
+            //    {
+            //        juggedMatrix[i][j] = rand.Next(0, 10);
+            //        Console.Write(juggedMatrix[i][j] + " ");
+            //    }
+
+            //    sizeIncrementer++;
+            //    Console.WriteLine();
+            //}
+
+
+            //int w = Add(20, 30);
+            //int res = Add(y:30, x:20);
+
+            //Console.WriteLine(res);
+
+            //string s = "kaisar";
+            //switch (s)
+            //{
+            //    case "kaisar":
+            //        Console.WriteLine("ALOHA BEACH!");
+            //        break;
+            //    default:
+            //        break;
+            //}
+
+            ////double[] arr = new double[] { 1, 2, 3, 4 };
+
+            //AverageValue(1,2,3,4,5,6,7,8,9,10);
+
+
+            //Tuple<int, string, bool> tupleOne = 
+            //    new Tuple<int, string, bool>(10, "Iskander", true);
+
+            //var items = MinAvrMaxMostOcc(1, 2, 3);
+
+            //Tuple<DateTime[], Tuple<int, TimeSpan[]>> res;
+
+            // Named tuple
+            // var moreCleverTuple = (firstItem : "Kaisar", secondItem: "Dana");
+
+            int x = 10;
+            x = x + 2;
+
+            // Immutable!!!!!!!!!!!
+
+            string y = "kaisar";
+
+            y = y + "dana";
+            y = y + "ekaterina";
+
+            int a = 10;
+
+            Console.WriteLine("Prgogram started...");
+            StringBuilder sb = new StringBuilder();
+            string stringGangBang = "a";
+
+            for (int i = 0; i < 1000000; i++)
+            {
+                sb.Append('a');
+                // stringGangBang += 'a';
+                if(i == (1000000 - 1))
+                {
+                    Console.WriteLine();
+                }
+            }
+            Console.WriteLine("Prgogram completed...");
+
+            Console.ReadLine();
+        }
+    }
+}
+
+27.06.2018
+1. Static methods (return type, arguments)
+2. Enumeration data type
+3. StringBuilder type ()
+4. Switch-case operator  (show pattern-matching after classes introduced)
+5. One-dimensional arrays
+6. Multi-dimensional arrays
+7. Jugged-arrays
+8. Expression Bodied Members
+9. Parameter modifier (param)
+10. Optional parameters
+11. Method overloading
+12. Local functions
+13. Tuples and named tuples
+
+Troelsen book, Chapters # 4
+
+
