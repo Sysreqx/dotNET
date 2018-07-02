@@ -1,0 +1,16 @@
+
+02.07.2018
+1. Classes and Objects
+2. Introducing UML-notation
+3. Behavior and state of classes
+4. Access modifiers on classes (public, private, protected, internal, protected internal, private internal)
+5. "This" keyword
+6. Constructors, destructors  and static-constructors
+7. Fields
+8. Methods
+9. Static version of classes, fields, methods
+10. Singleton pattern 
+11. Partial types
+
+Weisfeld book, Chapters #1-4
+
