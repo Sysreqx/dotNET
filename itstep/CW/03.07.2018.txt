@@ -1,0 +1,11 @@
+03.07.2018
+1. Working with Exceptions
+2. System predefined exceptions
+3. Custom user-defined exceptions
+4. Try, catch, throw, finally code-blocks
+5. Exception filtering
+6. StackTrace API 
+7. Log-all principle
+8. Code-review
+9. Pair programming
+10. Unit-testing with AAA-rule
