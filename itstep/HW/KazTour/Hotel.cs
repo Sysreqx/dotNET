@@ -9,12 +9,12 @@ namespace KazTour
     class Hotel
     {
         public string name { get; set; }
-        public int numberOfStar { get; set; }
+        public int numberOfStars { get; set; }
 
-        public Hotel(string name, int numberOfStar)
+        public Hotel(string name, int numberOfStars)
         {
             this.name = name;
-            this.numberOfStar = numberOfStar;
+            this.numberOfStars = numberOfStars;
         }
     }
 }
