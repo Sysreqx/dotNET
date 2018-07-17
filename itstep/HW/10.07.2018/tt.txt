@@ -1,0 +1,56 @@
+File system 
+(создание , удаление , переименование , чтение каталога)
+
+File : IPath : ITree
+	name
+	date
+	size
+	parent
+		Create
+		Delete
+		Rename
+		ShowPath, ShowTree
+Disk
+	size
+	freeSpace
+LogicalDisk : IPath : ITree
+	name
+	date
+	size
+	freeSpace
+		Create
+		Delete
+		Format
+		Rename
+		ShowPath, ShowTree
+Folder : IPath : ITree
+	name
+	date
+	size
+	parent
+		Create
+		Delete
+		Rename
+		ShowPath, ShowTree
+IPath
+	ShowPath
+ITree
+
+
+C:
+  \Program files
+      \CDEx
+           \CDEx.exe
+           \CDEx.hlp
+           \mppenc.exe
+  \Мои документы
+      \Wiki.txt
+      \Tornado.jpg
+D:
+  \Music
+      \ABBA
+           \1974 Waterloo
+           \1976 Arrival
+               \Money, Money, Money.ogg
+           \1977 The Album
+(Иерархическая файловая система Windows/DOS)
