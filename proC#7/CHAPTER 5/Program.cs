@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// The Role of the Default Constructor.
+        /* ~~~~~~~
+    The first pillar of OOP is called encapsulation
+        ~~~~~~~ */
 
 namespace CHAPTER_5
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("***** Fun with class Types *****\n");
-            // Make a Motorcycle.
-            Motorcycle c = new Motorcycle(5);
-            c.SetDriverName("Tiny");
-            MakeSomeBikes();
+        {// This is just fine.
+            TimeUtilClass.PrintDate();
+            TimeUtilClass.PrintTime();
+            // Compiler error! Can't create instance of static classes!
             Console.ReadLine();
         }
 
