@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
         /* ~~~~~~~
-    The first pillar of OOP is called encapsulation
+    The first pillar of OOP is called encapsulation1
         ~~~~~~~ */
 
 namespace CHAPTER_5
